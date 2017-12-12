@@ -8,6 +8,11 @@ import styles from './PostListItem.css';
 function PostListItem(props) {
   return (
     <div className={styles['single-post']}>
+      <div style={{ float: 'right' }}>
+        <button onClick={props.thumbUp}> + </button>
+          &nbsp; {props.post.votes} &nbsp;
+        <button onClick={props.thumbDown}> - </button>
+      </div>
       <h3 className={styles['post-title']}>
         <Link to={`/posts/${props.post.slug}-${props.post.cuid}`} >
           {props.post.title}
@@ -28,8 +33,11 @@ PostListItem.propTypes = {
     content: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     cuid: PropTypes.string.isRequired,
+    votes: PropTypes.number.isRequired,
   }).isRequired,
   onDelete: PropTypes.func.isRequired,
+  thumbUp: PropTypes.func.isRequired,
+  thumbDown: PropTypes.func.isRequired,
 };
 
 export default PostListItem;
