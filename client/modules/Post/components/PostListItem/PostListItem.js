@@ -9,9 +9,9 @@ function PostListItem(props) {
   return (
     <div className={styles['single-post']}>
       <div style={{ float: 'right' }}>
-        <button onClick={props.thumbUp}> + </button>
+        <button onClick={props.thumbUp}> Thumb Up </button>
           &nbsp; {props.post.votes} &nbsp;
-        <button onClick={props.thumbDown}> - </button>
+        <button onClick={props.thumbDown}> Thumb Down </button>
       </div>
       <h3 className={styles['post-title']}>
         <Link to={`/posts/${props.post.slug}-${props.post.cuid}`} >
