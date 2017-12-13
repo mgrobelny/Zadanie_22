@@ -184,9 +184,13 @@ textarea {
 
 button {
   color: white;
-  background-color: blue;
+  background-color: green;
   border: none;
   padding: 5px 10px;
   font-weight: bold;
   border-radius: 15% 15%;
+}
+
+.buttDown {
+  background-color: red;
 }

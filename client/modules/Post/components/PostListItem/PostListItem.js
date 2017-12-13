@@ -11,7 +11,7 @@ function PostListItem(props) {
       <div style={{ float: 'right' }}>
         <button onClick={props.thumbUp}> Thumb Up </button>
           &nbsp; {props.post.votes} &nbsp;
-        <button onClick={props.thumbDown}> Thumb Down </button>
+        <button className={styles['buttDown']} onClick={props.thumbDown}> Thumb Down </button>
       </div>
       <h3 className={styles['post-title']}>
         <Link to={`/posts/${props.post.slug}-${props.post.cuid}`} >
